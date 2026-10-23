@@ -21,7 +21,7 @@ const app = express();
 app.use(cors({
   origin: '*', // Allows requests from React client (http://localhost:5174 or custom)
   methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-API-KEY', 'x-api-key']
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-API-KEY', 'x-api-key', 'X-ADMIN-KEY', 'x-admin-key']
 }));
 
 app.use(express.json());

@@ -2,8 +2,14 @@ import { Router, Request, Response } from 'express';
 import crypto from 'node:crypto';
 import sql from 'mssql';
 import { getDbPool } from '../db/sqlServer.js';
+import { requireAdminKey } from '../middlewares/authAdminKey.js';
+import { sunatRateLimiter } from '../middlewares/rateLimiter.js';
 
 export const companyRouter = Router();
+
+// 🛡️ Seguridad: Límite de peticiones y autenticación maestra
+companyRouter.use(sunatRateLimiter);
+companyRouter.use(requireAdminKey);
 
 /**
  * GET /api/companies/stats
