@@ -1,0 +1,39 @@
+{
+  "name": "ecommerce-service",
+  "version": "1.0.0",
+  "description": "Backend API service for Stuffus E-commerce - Pasarela de Pagos (Culqi, Mercado Pago, Yape)",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "backend",
+    "peru",
+    "culqi",
+    "mercadopago",
+    "yape",
+    "express"
+  ],
+  "dependencies": {
+    "@kembec/facturacion-electronica-sunat-sdk": "^1.0.0-rc.6",
+    "@types/qrcode": "^1.5.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.7.1",
+    "mercadopago": "^3.6.1",
+    "mssql": "^12.7.11",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/mssql": "^12.3.0",
+    "@types/node": "^22.10.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

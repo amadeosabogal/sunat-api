@@ -1,0 +1,30 @@
+# Environment and secrets
+.env
+.env.*
+.env.local
+!.env.example
+
+# SUNAT Certificates & Keys (CONFIDENCIAL)
+certs/*
+!certs/.gitkeep
+*.pem
+*.key
+*.p12
+*.crt
+*.cer
+
+# Storage files (XMLs, CDRs and local history)
+storage/vouchers/*.xml
+storage/vouchers/*.zip
+storage/vouchers/cdr_*
+storage/vouchers/history.json
+!storage/vouchers/.gitkeep
+
+# Node & Build
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+.DS_Store
