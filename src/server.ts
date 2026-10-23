@@ -12,6 +12,7 @@ import { paymentRouter } from './routes/paymentRoutes.js';
 import { orderRouter } from './routes/orderRoutes.js';
 import { webhookRouter } from './routes/webhookRoutes.js';
 import { sunatRouter } from './routes/sunatRoutes.js';
+import { companyRouter } from './routes/companyRoutes.js';
 import { sunatService } from './services/sunatService.js';
 
 const app = express();
@@ -41,6 +42,7 @@ app.use('/api/payments', paymentRouter);
 app.use('/api/orders', orderRouter);
 app.use('/api/webhooks', webhookRouter);
 app.use('/api/sunat', sunatRouter);
+app.use('/api/companies', companyRouter);
 
 // Start server
 // Inicializar SDK SUNAT al inicio
